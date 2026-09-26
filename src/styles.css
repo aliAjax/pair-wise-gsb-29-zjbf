@@ -83,7 +83,7 @@ h1 {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 14px;
   margin-bottom: 18px;
 }
@@ -109,8 +109,15 @@ h1 {
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) 1fr;
+  grid-template-columns: minmax(300px, 420px) 1fr;
   gap: 18px;
+  align-items: start;
+}
+
+.side {
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
 .panel, .list-panel {
@@ -249,6 +256,122 @@ textarea {
   text-align: center;
   color: #69758c;
   padding: 32px 12px;
+}
+
+.status.cold {
+  background: #e5f0fb;
+  color: #1d5fa8;
+}
+
+.status.leave {
+  background: #fdeae4;
+  color: #c84b31;
+}
+
+.tag.dirty {
+  background: #fdeae4;
+  border-color: #f2c4b6;
+  color: #c84b31;
+}
+
+.note.warn {
+  background: #fdf3e4;
+  color: #9a6a12;
+  border: 1px solid #f0ddb0;
+}
+
+.berth {
+  margin: 8px 0 12px;
+  color: #536078;
+  font-size: 14px;
+}
+
+.berth em {
+  color: #c84b31;
+  font-style: normal;
+}
+
+.bag-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.bag-list .empty {
+  padding: 10px;
+}
+
+.bag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px dashed #d9e2ee;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #445069;
+  font-size: 13px;
+}
+
+.bag-row button {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.inline-form input,
+.inline-form select {
+  flex: 1 1 110px;
+  width: auto;
+}
+
+.inline-form button {
+  white-space: nowrap;
+}
+
+.transfer-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fdeae4;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.transfer-row select {
+  flex: 1 1 160px;
+  width: auto;
+}
+
+.leave-tip {
+  color: #c84b31;
+  font-size: 13px;
+  flex: 1 1 100%;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.handover {
+  background: #f4f9f6;
+}
+
+.actions select {
+  flex: 1 1 150px;
+  width: auto;
 }
 
 @media (max-width: 860px) {
